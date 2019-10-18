@@ -1,0 +1,19 @@
+{
+    "name": "uidesign-toolkit",
+    "version": "0.0.1-alpha",
+    "private": true,
+    "description": "Computational helper tools for UI design",
+    "license": "BSD-3-Clause",
+    "main": "./index.js",
+    "author": {
+        "name": "Josh Li",
+        "url": "https://github.com/maddrag0n"
+    },
+    "contributors": [],
+    "dependencies": {
+        "color": "^3.1.2",
+        "esm": "^3.2.25",
+        "ntcjs": "^1.1.2",
+        "yargs": "^14.2.0"
+    }
+}
