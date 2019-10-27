@@ -24,17 +24,24 @@ const args = yargs.help('help')
 		'calculate options for number of columns given width and spacing',
 		argv => yargs
 				.option('availableWidth', {
-					alias: [ 'w' ],
+					alias: [ 'w', 'W' ],
 					default: 0,
 				})
 				.option('spacing', {
-					alias: [ 's' ],
+					alias: [ 's', 'S' ],
 					default: 0,
 				})
 				.option('minColWidth', {
+					alias: [ 'min' ],
 					default: 4,
 				})
-				.option('maxColWidth')
+				.option('maxColWidth', {
+					alias: [ 'max' ],
+				})
+				.option('precision', {
+					alias: [ 'p', 'P' ],
+					default: 4,
+				})
 		,
 		argv => calculateCols(argv)
 	)

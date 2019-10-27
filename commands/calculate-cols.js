@@ -13,6 +13,7 @@ export default ({
     spacing,
     minColWidth,
     maxColWidth,
+    precision = 1,
 }) => {
     const results = [];
 
@@ -20,7 +21,7 @@ export default ({
         const netWidth = calculateNetWidth(availableWidth, spacing, i);
         const colWidth = netWidth / i;
         if (
-            netWidth % i === 0
+            netWidth * precision % i === 0
             && colWidth >= minColWidth
             && (!maxColWidth || colWidth <= maxColWidth)
         ) {
