@@ -16,12 +16,13 @@ export default ({
     precision = 1,
 }) => {
     const results = [];
+    const markup = Math.pow(10, precision - 1);
 
     for (let i = 1; i <= availableWidth && calculateNetWidth(availableWidth, spacing, i); i++) {
         const netWidth = calculateNetWidth(availableWidth, spacing, i);
         const colWidth = netWidth / i;
         if (
-            netWidth * precision % i === 0
+            netWidth * markup % i === 0
             && colWidth >= minColWidth
             && (!maxColWidth || colWidth <= maxColWidth)
         ) {

@@ -40,7 +40,7 @@ const args = yargs.help('help')
 				})
 				.option('precision', {
 					alias: [ 'p', 'P' ],
-					default: 4,
+					default: 1,
 				})
 		,
 		argv => calculateCols(argv)
