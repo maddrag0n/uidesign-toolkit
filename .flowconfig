@@ -1,0 +1,11 @@
+[ignore]
+.*\(lib\|test\|builtin-modules\|binary-extensions\|faker\|spdx\).*\.json
+
+[include]
+
+[libs]
+
+[options]
+module.system.node.resolve_dirname=node_modules
+module.system.node.resolve_dirname=commands
+module.system.node.resolve_dirname=tools

@@ -1,0 +1,35 @@
+{
+    "tags": {
+        "allowUnknownTags": true
+    },
+    "source": {
+        "include": [
+			"./src/commands"
+		],
+        "includePattern": ".+\\.js?$",
+        "excludePattern": "(node_modules|docs|build|.git|__tests__|\\.test\\.js)"
+    },
+    "plugins": [
+        "plugins/markdown",
+        "node_modules/jsdoc-babel"
+    ],
+    "babel": {
+      "babelrc": true
+    },
+    "opts": {
+        "template": "node_modules/docdash",
+        "encoding": "utf8",
+        "destination": "docs/",
+        "readme": "README.MD",
+        "recurse": true,
+        "verbose": false
+    },
+    "templates": {
+        "cleverLinks": false,
+        "monospaceLinks": false
+    },
+		"docdash": {
+			"static": true,
+			"sort": true
+		}
+}
